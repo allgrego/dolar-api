@@ -1,4 +1,7 @@
 <?php
+/* @author: Gregorio Alvarez <allgrego14@gmail.com>
+ * @last modification date: 7-9-2020
+ */
 include_once("functions.php");
 
 $dolar_url='https://s3.amazonaws.com/dolartoday/data.json';

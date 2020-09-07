@@ -1,4 +1,8 @@
 <?php
+/* @author: Gregorio Alvarez <allgrego14@gmail.com>
+ * @last modification date: 7-9-2020
+ */
+
 function dolar_parse($precio_dolar){
     $aux_ar=explode(".",$precio_dolar);
     $entero=$aux_ar[0];
