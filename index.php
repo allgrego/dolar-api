@@ -1,6 +1,9 @@
 <?php
 /* @author: Gregorio Alvarez <allgrego14@gmail.com>
  * @last modification date: 7-9-2020
+ * 
+ * No funciona los miércoles. Se asumo que es por el "é".
+ * El $dolar_array no se completa
  */
 include_once("functions.php");
 
