@@ -36,9 +36,9 @@ $hora=$fechalarga_array[3].$fechalarga_array[4];
     <p>Última Actualización: <?php echo $fecha." - ".$hora?><br></p>
     <p>Fuente: Dolar Today</p>
 
-    <div class="formulario">
-        <form>
-            <button type="submit" href="index.php" class="button" >Actualizar</button>
+    <div>
+        <form action="index.php" method="post">
+            <button type="submit" >Actualizar</button>
         </form>
     </div>
 </body>
