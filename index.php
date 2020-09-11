@@ -1,9 +1,9 @@
 <?php
 /* @author: Gregorio Alvarez <allgrego14@gmail.com>
- * @last modification date: 7-9-2020
+ * @last modification date:11-9-2020
  * 
- * No funciona los miércoles. Se asumo que es por el "é".
- * El $dolar_array no se completa
+ * No funciona los miércoles. Se asume que por el "é". El $dolar_array no se completa
+ * 
  */
 include_once("functions.php");
 
@@ -11,6 +11,7 @@ $dolar_url='https://s3.amazonaws.com/dolartoday/data.json';
 
 $dolar_json=file_get_contents($dolar_url);
 $dolar_array=json_decode($dolar_json,true);
+
 /******Precio Dolar******/
 $dolar_precio=dolar_parse($dolar_array['USD']['dolartoday']);
 /*******Fecha************/
@@ -20,7 +21,6 @@ $fechalarga_array = explode(" ", $fechalarga);
 $fecha=$dolar_array['_timestamp']['fecha_corta'];
 /******Hora **********/
 $hora=$fechalarga_array[3].$fechalarga_array[4];
-
 ?>
 
 <!DOCTYPE html>
@@ -31,13 +31,13 @@ $hora=$fechalarga_array[3].$fechalarga_array[4];
 
 </head>
 <body>
-    <h1>Dolar Paralelo Promedio</h1>
-    <h3>Dolar Paralelo: Bs <?php echo $dolar_precio?></h3>
+    <h1>Dolar Paralelo DolarToday</h1>
+    <h3>Tasa: Bs <?php echo $dolar_precio?></h3>
     <p>Última Actualización: <?php echo $fecha." - ".$hora?><br></p>
     <p>Fuente: Dolar Today</p>
 
     <div>
-        <form action="index.php" method="post">
+        <form action="index.php" method="GET">
             <button type="submit" >Actualizar</button>
         </form>
     </div>
