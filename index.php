@@ -1,8 +1,8 @@
 <?php
 /* @author: Gregorio Alvarez <allgrego14@gmail.com>
- * @last modification date:11-9-2020
+ * @last modification date:25-9-2020
  * 
- * No funciona los miércoles. Se asume que por el "é". El $dolar_array no se completa
+ * No funciona los miércoles y sábados. Se asume que por el "é" y "á". El $dolar_array no se completa
  * 
  */
 include_once("functions.php");
@@ -43,3 +43,12 @@ $hora=$fechalarga_array[3].$fechalarga_array[4];
     </div>
 </body>
 </html>
+
+<?php
+/*
+ * Automatic Page Reaload every 8 minutes
+ */
+$page = $_SERVER['PHP_SELF'];
+$sec = "480";
+header("Refresh: $sec; url=$page");
+?>
