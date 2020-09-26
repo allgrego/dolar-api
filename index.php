@@ -2,14 +2,18 @@
 /* @author: Gregorio Alvarez <allgrego14@gmail.com>
  * @last modification date:25-9-2020
  * 
- * No funciona los miércoles y sábados. Se asume que por el "é" y "á". El $dolar_array no se completa
+ * Comentario: No funciona los miércoles y sábados. 
+ * Se asume que por el "é" y "á". El $dolar_array no se completa
  * 
  */
 include_once("functions.php");
 
 $dolar_url='https://s3.amazonaws.com/dolartoday/data.json';
 
+//obtiene JSON de API en dolar today
 $dolar_json=file_get_contents($dolar_url);
+
+//Se transforma el json obtenido en un array
 $dolar_array=json_decode($dolar_json,true);
 
 /******Precio Dolar******/
@@ -48,7 +52,5 @@ $hora=$fechalarga_array[3].$fechalarga_array[4];
 /*
  * Automatic Page Reaload every 8 minutes
  */
-$page = $_SERVER['PHP_SELF'];
-$sec = "480";
-header("Refresh: $sec; url=$page");
+reload("480");
 ?>
