@@ -1,0 +1,23 @@
+html {
+    min-height: 100%;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(-180deg, #f1f8e9 0%, #dcedc8 72%, #c5e1a5 100%);
+    min-height: 100%;
+    padding-bottom: 5rem;
+  }
+
+.border{
+    border-radius: 10px;
+}
+
+button.button-primary{
+    background-color: green;
+    border-color: darkgreen; 
+}
+button.button-primary:hover{
+    background-color: #7cb342;
+    border-color: #7cb342; 
+}
