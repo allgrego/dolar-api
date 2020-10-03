@@ -21,3 +21,7 @@ button.button-primary:hover{
     background-color: #7cb342;
     border-color: #7cb342; 
 }
+
+.api-error{
+    color: red;
+}
